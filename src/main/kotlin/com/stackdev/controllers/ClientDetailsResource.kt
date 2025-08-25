@@ -27,7 +27,7 @@ class ClientDetailsResource {
     }
 
     @GET
-    @Path("/{id}")
+    @Path("/id/{id}")
     fun findById(
         @PathParam("id") id: Long,
     ): Response {
@@ -36,8 +36,8 @@ class ClientDetailsResource {
     }
 
     @GET
-    @Path("/{name}")
-    fun findById(
+    @Path("/name/{name}")
+    fun findByName(
         @PathParam("name") name: String,
     ): Response {
         val client = clientDetailsService.findByName(name)

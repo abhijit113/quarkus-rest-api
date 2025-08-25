@@ -32,15 +32,7 @@ class ClientDetailsService {
         clientDetailsRepository.deleteById(id)
     }
 
-    fun updateClient(clientDetails: ClientDetails) {
-        clientDetailsRepository.update(
-            "" +
-                "name = '${clientDetails.name}', " +
-                "surname = '${clientDetails.surname}', " +
-                "age = '${clientDetails.age}', " +
-                "email = '${clientDetails.email}', " +
-                "basicSalary… = '${clientDetails.basicSalary}' " +
-                "where id = '${clientDetails.id}' ",
-        )
+    fun updateClient(client: ClientDetails) {
+        clientDetailsRepository.updateClientDetails(client)
     }
 }
